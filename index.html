@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="moreModulesApp">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>More Modules</title>
+    <link rel="stylesheet" href="node_modules/ng-tags-input/build/ng-tags-input.min.css" media="screen" title="no title">
+    <script src="angular.min.js"></script>
+    <script type="text/javascript" src="node_modules/ng-tags-input/build/ng-tags-input.min.js"></script>
+    <script src="module.js">
+
+    </script>
+    <script src="app.js"></script>
+  </head>
+  <body>
+
+    <h1>More Angular Modules</h1>
+
+    <div ng-controller="MoreModulesModule as m">
+      {{m.helloWorld}}
+    </div>
+
+    <div ng-controller="TagsCtrl as tagsCtrl">
+      <p><a href="http://ngmodules.org" title="Angular Modules repository">http://ngmodules.org</a></p>
+      <p>We're going to use <a href="http://ngmodules.org/modules/ngTagsInput" title="ngTagsInput module">http://ngmodules.org/modules/ngTagsInput</a></p>
+      <tags-input ng-model="TagsCtrl.tags"></tags-input>
+    </div>
+
+  </body>
+</html>
